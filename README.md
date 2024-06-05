@@ -3,8 +3,8 @@
 This repository is the official implementation of "SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation"
 
 - [arxiv](https://arxiv.org/abs/2405.18503)
-- [Audio Demo Samples](https://koichi-saito-sony.github.io/soundctm/)
-- [Huggingface (Now only checkpoints are avaiable)](https://huggingface.co/Sony/soundctm)
+- [Audio Samples](https://koichi-saito-sony.github.io/soundctm/)
+- [Huggingface (Now only checkpoints are avaiable...)](https://huggingface.co/Sony/soundctm)
 
 Contact:
 - Koichi SAITO: koichi.saito@sony.com
