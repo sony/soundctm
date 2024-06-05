@@ -4,16 +4,17 @@ This repository is the official implementation of "SoundCTM: Uniting Score-based
 
 - [arxiv](https://arxiv.org/abs/2405.18503)
 - [Audio Demo Samples](https://koichi-saito-sony.github.io/soundctm/)
+- [Huggingface (Now only checkpoints are avaiable)](https://huggingface.co/Sony/soundctm)
 
 Contact:
 - Koichi SAITO: koichi.saito@sony.com
 
 ## Checkpoints
 
-- Download and put the [teacher model's checkpoints](https://huggingface.co/koichisaito/soundctm/tree/main/ckpt/teacher) and [AudioLDM-s-full checkpoints for VAE+Vocoder part](https://huggingface.co/koichisaito/soundctm/blob/main/ckpt/audioldm-s-full.ckpt) to `soundctm/ckpt`
-- [SoundCTM checkpoint](https://huggingface.co/koichisaito/soundctm/tree/main/ckpt/soundctm_ckpt) on AudioCaps (ema=0.999, 30K training iterations)
+- Download and put the [teacher model's checkpoints](https://huggingface.co/Sony/soundctm/tree/main/ckpt/teacher) and [AudioLDM-s-full checkpoints for VAE+Vocoder part](https://huggingface.co/Sony/soundctm/blob/main/ckpt/audioldm-s-full.ckpt) to `soundctm/ckpt`
+- [SoundCTM checkpoint](https://huggingface.co/Sony/soundctm/tree/main/soundctm_ckpt) on AudioCaps (ema=0.999, 30K training iterations)
 
-For inference, both [AudioLDM-s-full (for VAE's decoder+Vocoder)](https://huggingface.co/koichisaito/soundctm/blob/main/ckpt/audioldm-s-full.ckpt) and [SoundCTM](https://huggingface.co/koichisaito/soundctm/tree/main/ckpt/soundctm_ckpt) checkpoints will be used.
+For inference, both [AudioLDM-s-full (for VAE's decoder+Vocoder)](https://huggingface.co/Sony/soundctm/blob/main/ckpt/audioldm-s-full.ckpt) and [SoundCTM](https://huggingface.co/Sony/soundctm/tree/main/soundctm_ckpt) checkpoints will be used.
 
 ## Prerequisites
 
