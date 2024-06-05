@@ -1,0 +1,1 @@
+from tango_edm.audioldm.variational_autoencoder.autoencoder import AutoencoderKL
