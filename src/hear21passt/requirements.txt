@@ -1,0 +1,7 @@
+pre-commit
+pytest
+pytest-cov
+pytest-env
+torch>=1.8.1
+torchaudio>=0.8.1
+timm>=0.4.12
