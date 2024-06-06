@@ -4,7 +4,7 @@ This repository is the official implementation of "SoundCTM: Uniting Score-based
 
 - [arxiv](https://arxiv.org/abs/2405.18503)
 - [Audio Samples](https://koichi-saito-sony.github.io/soundctm/)
-- [Hugging Face (Now only checkpoints are avaiable.](https://huggingface.co/Sony/soundctm)
+- [Hugging Face (Now only checkpoints are avaiable.）](https://huggingface.co/Sony/soundctm)
 
 Contact:
 - Koichi SAITO: koichi.saito@sony.com
