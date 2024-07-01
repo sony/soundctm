@@ -18,7 +18,7 @@ For inference, both [AudioLDM-s-full (for VAE's decoder+Vocoder)](https://huggin
 
 ## Prerequisites
 
-Install docker to your own server and biuld docker container:
+Install docker to your own server and build docker container:
 
 ```bash
 docker build -t soundctm .
