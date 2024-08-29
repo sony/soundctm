@@ -24,7 +24,7 @@ def karras_sample(
     teacher=False,
 ):
 
-    if sampler in ['determinisitc', 'cm_multistep', 'gamma_multistep']:
+    if sampler in ['determinisitc', 'cm_multistep', 'gamma_multistep', 'onestep']:
         sigmas = get_sigmas_karras(steps + 1, sigma_min, sigma_max, rho, device=device)
     else:
         sigmas = get_sigmas_karras(steps, sigma_min, sigma_max, rho, device=device)
@@ -36,6 +36,7 @@ def karras_sample(
         "determinisitc": determinisitc_sampling,
         "cm_multistep": cm_multistep_sampling,
         "gamma_multistep": gamma_multistep_sampling,
+        "onestep": onestep_sampling,
     }[sampler]
 
     if sampler in ["determinisitc", "cm_multistep"]:
@@ -138,6 +139,48 @@ def determinisitc_sampling(
             d = to_d(x, sigma, denoised)
             dt = sigmas[i + 1] - sigma
             x = x + d * dt
+    return x
+
+@th.no_grad()
+def onestep_sampling(
+    denoiser,
+    x,
+    sigmas,
+    cond,
+    nu,
+    omega=None,
+    ctm=False,
+    teacher=False,
+    progress=False,
+    ts=[],
+    t_min=0.002,
+    t_max=80.0,
+    rho=7.0,
+    steps=40,
+):
+    """SoundCTM's onestep sampling."""
+    s_in = x.new_ones([x.shape[0]])
+    if omega is not None:
+        omega = omega * th.ones((x.shape[0],), device=x.device)
+    if ts != [] and ts != None:
+        sigmas = []
+        t_max_rho = t_max ** (1 / rho)
+        t_min_rho = t_min ** (1 / rho)
+        s_in = x.new_ones([x.shape[0]])
+
+        for i in range(len(ts)):
+            sigmas.append((t_max_rho + ts[i] / (steps - 1) * (t_min_rho - t_max_rho)) ** rho)
+        sigmas = th.tensor(sigmas)
+        sigmas = append_zero(sigmas).to(x.device)
+    sigma = sigmas[0]
+    sigma_end = sigmas[-1]
+    x_in = th.cat([x] * 2)
+    cond_cfg = cond + ([""] * len(cond))
+    denoised = denoiser(x_in, th.cat([sigma * s_in] * 2), cond=cond_cfg, 
+                        s=th.cat([sigma_end * s_in] * 2), ctm=ctm, teacher=teacher, cfg=omega)
+    denoised_text, denoised_uncond = denoised.chunk(2)
+    denoised = denoised_uncond + nu * (denoised_text - denoised_uncond)
+    x = denoised
     return x
 
 @th.no_grad()
