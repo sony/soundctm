@@ -70,7 +70,7 @@ def parse_args():
     )
     parser.add_argument(
         "--sampler", type=str, default='determinisitc',
-        help="Inference sampling methods. You can choose ['determinisitc' (gamma=0), 'cm_multistep' (gamma=1), 'gamma_multistep']."
+        help="Inference sampling methods. You can choose ['determinisitc' (gamma=0), 'cm_multistep' (gamma=1), 'gamma_multistep', 'onestep']."
     )
     parser.add_argument(
         "--sampling_gamma", type=float, default=0.9,
