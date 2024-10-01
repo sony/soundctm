@@ -173,7 +173,7 @@ def onestep_sampling(
         sigmas = th.tensor(sigmas)
         sigmas = append_zero(sigmas).to(x.device)
     sigma = sigmas[0]
-    sigma_end = sigmas[-1]
+    sigma_end = sigmas[-2]
     x_in = th.cat([x] * 2)
     cond_cfg = cond + ([""] * len(cond))
     denoised = denoiser(x_in, th.cat([sigma * s_in] * 2), cond=cond_cfg, 
