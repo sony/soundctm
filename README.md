@@ -9,6 +9,9 @@ This repository is the official implementation of "SoundCTM: Uniting Score-based
 Contact:
 - Koichi SAITO: koichi.saito@sony.com
 
+## Info 
+- [2024/12/04] We're plainig to open-source codebase/checkpoints of DiT backbone with full-band text-to-sound setting and downstream tasks, as well.
+
 ## Checkpoints
 
 - Download and put the [teacher model's checkpoints](https://huggingface.co/Sony/soundctm/tree/main/ckpt/teacher) and [AudioLDM-s-full checkpoints for VAE+Vocoder part](https://huggingface.co/Sony/soundctm/blob/main/ckpt/audioldm-s-full.ckpt) to `soundctm/ckpt`
