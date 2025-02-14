@@ -4,8 +4,8 @@ This repository is the official implementation of "SoundCTM: Uniting Score-based
 
 - Paper (ICLR'25 version): [Openreview](https://openreview.net/forum?id=KrK6zXbjfO)
 - Paper (NeurIPS'25 audio imagenation workshop version): [arxiv](https://arxiv.org/abs/2405.18503)
-- Demo page: [Audio Samples](https://koichi-saito-sony.github.io/soundctm/)
-- Chekpoints: [Hugging Face (Now only checkpoints are avaiable.）](https://huggingface.co/Sony/soundctm)
+- Demo page of SoundCTM UNet 16kHz (NeurIPS'25 audio imagenation workshop): [Audio Samples](https://koichi-saito-sony.github.io/soundctm/)
+- Chekpoints of SoundCTM UNet 16kHz (NeurIPS'25 audio imagenation workshop): [Hugging Face](https://huggingface.co/Sony/soundctm)
 
 
 
