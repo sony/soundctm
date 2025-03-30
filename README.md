@@ -69,11 +69,13 @@ $ WANDB_API_KEY="12345x6789y..."
 
 ## Citation
 ```
-@article{saito2024soundctm,
-  title={SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation}, 
+@inproceedings{
+  saito2025soundctm,
+  title={Sound{CTM}: Unifying Score-based and Consistency Models for Full-band Text-to-Sound Generation},
   author={Koichi Saito and Dongjun Kim and Takashi Shibuya and Chieh-Hsin Lai and Zhi Zhong and Yuhta Takida and Yuki Mitsufuji},
-  journal={arXiv preprint arXiv:2405.18503},
-  year={2024}
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=KrK6zXbjfO}
 }
 ```
 
