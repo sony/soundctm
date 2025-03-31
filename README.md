@@ -15,7 +15,7 @@ Contact:
 - Koichi SAITO: koichi.saito@sony.com
 
 ## Info 
-- [2025/03/30] SoundCTM-DiT is uploaded.
+- [2025/03/30] SoundCTM-DiT is uploaded on [SoundCTM-DiT (ICLR'25)](https://github.com/koichi-saito-sony/soundctm_dit_iclr/).
 - [2024/12/04] We're plainig to open-source codebase/checkpoints of DiT backbone with full-band text-to-sound setting and downstream tasks, as well.
 - [2024/02/10] Our paper, updated version [openreview](https://openreview.net/forum?id=KrK6zXbjfO) from [previous version](https://arxiv.org/abs/2405.18503), is accepted at ICLR'25!!
 
