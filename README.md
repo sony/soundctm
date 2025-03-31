@@ -7,12 +7,15 @@ This repository is the official implementation of "SoundCTM: Uniting Score-based
 - Demo page of SoundCTM UNet 16kHz (NeurIPS'25 audio imagenation workshop): [Audio Samples](https://koichi-saito-sony.github.io/soundctm/)
 - Chekpoints of SoundCTM UNet 16kHz (NeurIPS'25 audio imagenation workshop): [Hugging Face](https://huggingface.co/Sony/soundctm)
 
+- GitHub repository of [SoundCTM-DiT (ICLR'25)](https://github.com/koichi-saito-sony/soundctm_dit_iclr/)
+- Checkpoints of [SoundCTM-DiT (ICLR'25)](https://huggingface.co/koichisaito/soundctm_dit)
 
 
 Contact:
 - Koichi SAITO: koichi.saito@sony.com
 
 ## Info 
+- [2025/03/30] SoundCTM-DiT is uploaded.
 - [2024/12/04] We're plainig to open-source codebase/checkpoints of DiT backbone with full-band text-to-sound setting and downstream tasks, as well.
 - [2024/02/10] Our paper, updated version [openreview](https://openreview.net/forum?id=KrK6zXbjfO) from [previous version](https://arxiv.org/abs/2405.18503), is accepted at ICLR'25!!
 
