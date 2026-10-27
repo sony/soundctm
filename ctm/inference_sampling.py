@@ -24,7 +24,7 @@ def karras_sample(
     teacher=False,
 ):
 
-    if sampler in ['determinisitc', 'cm_multistep', 'gamma_multistep', 'onestep']:
+    if sampler in ['determinisitc', 'deterministic', 'cm_multistep', 'gamma_multistep', 'onestep']:
         sigmas = get_sigmas_karras(steps + 1, sigma_min, sigma_max, rho, device=device)
     else:
         sigmas = get_sigmas_karras(steps, sigma_min, sigma_max, rho, device=device)
@@ -34,12 +34,13 @@ def karras_sample(
 
     sample_fn = {
         "determinisitc": determinisitc_sampling,
+        "deterministic": determinisitc_sampling,
         "cm_multistep": cm_multistep_sampling,
         "gamma_multistep": gamma_multistep_sampling,
         "onestep": onestep_sampling,
     }[sampler]
 
-    if sampler in ["determinisitc", "cm_multistep"]:
+    if sampler in ["determinisitc", "deterministic", "cm_multistep"]:
         sampler_args = dict(
             ts=ts, t_min=sigma_min, t_max=sigma_max, rho=rho, steps=steps
         )
