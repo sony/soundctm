@@ -2,7 +2,7 @@ datasets==2.14.5
 diffusers==0.26.2
 numpy==1.23.5
 pandas==2.0.2
-transformers==4.36.2
+transformers==5.10.1
 wandb==0.15.11
 accelerate==0.20.3
 blobfile==2.1.1
