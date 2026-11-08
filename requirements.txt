@@ -1,5 +1,5 @@
 datasets==2.14.5
-diffusers==0.26.2
+diffusers==0.38.0
 numpy==1.23.5
 pandas==2.0.2
 transformers==5.10.1
