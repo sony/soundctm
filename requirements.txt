@@ -32,4 +32,4 @@ laion-clap==1.1.4
 matplotlib
 pydub==0.25.1
 pyloudnorm==0.1.1
-python-dotenv==1.0.0
+python-dotenv==1.2.2
